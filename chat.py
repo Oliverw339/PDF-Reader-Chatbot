@@ -1,11 +1,12 @@
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from llm import create_llm
+import time
 
 
 embeddings = HuggingFaceEmbeddings( model_name= "sentence-transformers/all-MiniLM-L6-v2")
 
-vectorstore = FAISS.load_local( "vectorstores\keto", embeddings, allow_dangerous_deserialization=True)
+vectorstore = FAISS.load_local( "vectorstores", embeddings, allow_dangerous_deserialization=True)
 
 print("Vectorstore loaded")
 
@@ -39,3 +40,5 @@ Answer: """
 response = llm.invoke(prompt)
 
 print(response)
+
+# 95 seconds

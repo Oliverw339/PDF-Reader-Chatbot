@@ -52,19 +52,19 @@ def create_embeddings():
 
 embeddings = create_embeddings()
 
-def create_vectorstore(name, chunks):
+def create_vectorstore(chunks):
 
     vectorstore = FAISS.from_documents(documents = chunks , embedding = embeddings)
-    vectorstore.save_local(f"vectorstores/{name}")
+    vectorstore.save_local("vectorstores")
     print("vector database created!")
     return vectorstore
 
 # Run once:
-# KETOBreadVectorstore = create_vectorstore("keto",KETOBreadChunks) 
+#KETOBreadVectorstore = create_vectorstore(KETOBreadChunks) 
 
 def load_vectorstore(): 
     embeddings
-    vectorstore = FAISS.load_local("vectorstore",embeddings,allow_dangerous_deserialization=True)
+    vectorstore = FAISS.load_local("vectorstores",embeddings,allow_dangerous_deserialization=True)
     return vectorstore
 
 vectorstore = load_vectorstore()

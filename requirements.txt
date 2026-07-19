@@ -15,4 +15,5 @@ faiss-cpu
 
 sentence-transformers
 
+time
 # python -m pip install
