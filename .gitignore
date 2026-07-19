@@ -1,5 +1,5 @@
 # Virtual environments 
-.venv/*
+.venv/
 # Python
 __pycache__/
 *.py[cod]
@@ -7,4 +7,4 @@ __pycache__/
 *.pdf
 
 #Vectorstore DB
-vectorstores/*
+vectorstores\*
