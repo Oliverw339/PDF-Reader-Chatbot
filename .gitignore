@@ -7,4 +7,4 @@ __pycache__/
 *.pdf
 
 #Vectorstore DB
-vectorstors\*
+vectorstores\*
