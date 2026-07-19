@@ -1,0 +1,11 @@
+# Virtual environments 
+.venv/*
+# Python
+__pycache__/
+*.py[cod]
+#PDFs 
+*.pdf
+
+#Vectorstore DB
+vectorstore
+vectorstors\*
