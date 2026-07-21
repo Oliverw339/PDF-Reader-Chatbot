@@ -4,6 +4,11 @@ python-dotenv
 
 PyPDF2
 
+pdfplumber
+pdf2image
+pyesseract 
+pillow
+
 langchain
 langchain-community
 langchain-core
