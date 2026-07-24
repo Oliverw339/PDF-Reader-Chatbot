@@ -23,4 +23,6 @@ pytest
 
 pdf2image
 pytesseract
+
+streamlit
 # python -m pip install

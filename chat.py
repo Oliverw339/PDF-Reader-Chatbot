@@ -5,8 +5,8 @@ from langchain_core.documents import Document
 from langchain_huggingface import HuggingFaceEmbeddings
 
 from llm import create_llm
+import streamlit
 
-chat_history= []
 
 MAX_MEMORY_TURNS = 6
 TOP_K_VECTORS = 3
@@ -53,12 +53,15 @@ def format_context_with_metadata(docs: List[Document]) -> str:
 
     return "\n\n".join(formatted_chunks)
 
-def ask_question(str)-> bool:
+
+def ask_question(str) -> bool:
     return None
+
 
 def chatbot() -> None:
     """ Run the chatbot"""
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    embeddings = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/all-MiniLM-L6-v2")
     vectorstore = FAISS.load_local(
         "vectorstores",
         embeddings,
@@ -68,10 +71,10 @@ def chatbot() -> None:
 
     llm = create_llm()
 
-
     print("Type your question. Type 'exit' to end chat.")
     while True:
-        question = input("Please enter your question or type 'exit' to exit: ").strip()
+        question = input(
+            "Please enter your question or type 'exit' to exit: ").strip()
         if not question:
             continue
         if question.lower() in {"exit", "e"}:
@@ -97,4 +100,5 @@ def chatbot() -> None:
 
 
 if __name__ == "__main__":
+    chat_history = []
     chatbot()

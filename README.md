@@ -6,6 +6,8 @@ A local-first retrieval-augmented generation (RAG) chatbot that answers question
 
 This project ingests PDFs, splits extracted text into chunks, embeds those chunks, and stores them in a FAISS vector index. At query time, the chatbot retrieves the most relevant chunks and sends them to an Ollama-hosted LLM for grounded answers. I have concentrated on a leightwweight locally run design for personal use cases.
 
+After sucessfully running and trailing a working local script I decided to work on a user interface for the chatbot.
+
 The current implementation prioritizes:
 
 - Local execution and data privacy.
@@ -161,7 +163,7 @@ python chat.py
 - Retrieval currently uses similarity search only (no reranking/hybrid retrieval).
 - `allow_dangerous_deserialization=True` is used when loading FAISS; treat local index files as trusted artifacts only.
 - Minimal automated test coverage at present.
-
+- Text based only. I would like to develop into computer vision that can see images too.
 ## Roadmap
 
 ### Near term
@@ -169,6 +171,9 @@ python chat.py
 - Add configuration for chunk size, overlap, and top-k at runtime.
 - Improve prompt templates and error handling for empty retrieval results.
 - Add structured tests for ingestion, retrieval, and prompt assembly.
+
+
+- fine tuning would be good but will increase time and space complexity. 
 
 ### Mid term
 
