@@ -5,8 +5,7 @@ python-dotenv
 PyPDF2
 
 pdfplumber
-pdf2image
-pyesseract 
+pdf2image 
 pillow
 
 langchain
@@ -20,5 +19,8 @@ faiss-cpu
 
 sentence-transformers
 
-time
+pytest
+
+pdf2image
+pytesseract
 # python -m pip install

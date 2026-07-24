@@ -15,12 +15,12 @@ TOP_K_VECTORS = 3
 def format_history(chat_history: List[Tuple[str, str]], max_turns: int = MAX_MEMORY_TURNS) -> str:
     """Format recent user and assistant turns into a memory block."""
     recent_history = chat_history[-max_turns:]
-    lines = []
+    current_lines = []
     for user_message, assistant_message in recent_history:
-        lines.append(f"User: {user_message}")
-        lines.append(f"Assistant: {assistant_message}")
+        current_lines.append(f"User: {user_message}")
+        current_lines.append(f"Assistant: {assistant_message}")
 
-    return "\n".join(lines)
+    return "\n".join(current_lines)
 
 
 def build_prompt(question: str, context: str, memory_block: str) -> str:
@@ -53,6 +53,8 @@ def format_context_with_metadata(docs: List[Document]) -> str:
 
     return "\n\n".join(formatted_chunks)
 
+def ask_question(str)-> bool:
+    return None
 
 def chatbot() -> None:
     """ Run the chatbot"""
@@ -65,6 +67,7 @@ def chatbot() -> None:
     print("Vectorstore loaded")
 
     llm = create_llm()
+
 
     print("Type your question. Type 'exit' to end chat.")
     while True:
