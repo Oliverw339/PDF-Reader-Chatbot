@@ -1,13 +1,7 @@
-streamlit
-
-python-dotenv
-
-PyPDF2
 
 pdfplumber
 pdf2image 
 pillow
-
 langchain
 langchain-community
 langchain-core
@@ -15,20 +9,11 @@ langchain-text-splitters
 langchain-huggingface
 langchain-openai
 langchain-ollama
-
 faiss-cpu
-
 sentence-transformers
-
 pytest
-
 pdf2image
 pytesseract
-
 streamlit
 
-dotenv
-huggingface_hub
-os 
 
-# python -m pip install
