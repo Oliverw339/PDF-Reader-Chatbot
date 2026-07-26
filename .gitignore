@@ -8,3 +8,8 @@ __pycache__/
 
 #Vectorstore DB
 vectorstores
+
+#Envronmental variables 
+.env
+
+.streamlit/secrets.toml
