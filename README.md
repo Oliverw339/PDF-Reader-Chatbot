@@ -106,7 +106,8 @@ The result is a local RAG workflow: retrieval provides grounded context, and the
 
 - Python 3.10+ (3.11 recommended)
 - Tesseract OCR installed and available on PATH
-- Poppler installed and available on PATH (required by `pdf2image` for PDFs)
+- Poppler installed and available on PATH (required by `pdf2image` for PDFs), 
+    the Poppler binaries can be found here: https://github.com/oschwartz10612/poppler-windows/tree/master 
 - Ollama installed with model pulled locally:
 
 ```powershell
